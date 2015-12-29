@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For SCA60C Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SCA60C	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+GetValueX	KEYWORD2
+GetValueY	KEYWORD2
+GetVolX	KEYWORD2
+GetVolY	KEYWORD2
+GetAngleX	KEYWORD2
+GetAngleY	KEYWORD2
+SetOffsetX	KEYWORD2
+SetOffsetY	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################

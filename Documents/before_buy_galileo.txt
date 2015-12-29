@@ -1,0 +1,41 @@
+I think it is important for people to know some things before they go out and buy a Galileo. Spending ($65-100 depending on where you buy) for a board that will not work for your project will be frustrating.
+ 
+The good things
+The Galileo board runs Linux
+Interactions between Linux and Arduino are fairly easy.
+With a few modifications you can turn your Galileo into a WiFi hot spot and people can use their phones to control the Arduino I/O pins.
+Note: it is a reduced version of Linux, so it does not support everything that other distributions might be able to do
+The Galileo board emulates Arduino functionality.
+The Galileo board runs a Linux program that can emulate Arduino sketches.
+The Sketches are even developed in the familiar Arduino IDE, and downloaded to the Galileo similar to other Arduino products.
+The board does not have an Arduino micro-controller, this is an important distinction vs other products. 
+The Galileo board has a pinout that is compatible with Arduino shields.
+Note: this means the pins are there, but does not guarantee compatibility even for official Arduino shields.
+It has a built in Ethernet port.
+Just plug in an Ethernet cable and you can start communicating with the internet.
+It has a built in SD Card slot.
+Just format the card as FAT or FAT32 and you can start using the SD card.
+Limited to 32GB in size, supports SDHC.
+Currently has a bug with file creation, but there is a work around, and that should be fixed in the next release.
+It is simple and fairly cheap to add on WiFi (~$30 for card, antennas, and mounting hardware)
+	Most mPCIe WiFi cards should work, as long as there is a Linux driver.
+	Some WiFi cards also include Bluetooth, however, I am not sure that it will work within Arduino sketches.
+	The Galileo board includes a USB Host connector.
+	There seem to be issues with the Arduino USB library though.
+	It is fairly simple to host a web site on the Galileo board.
+	The Galileo Linux has Python installed.
+	 
+	The Bad things:
+	It is early days for the Galileo board. There are bugs, there are missing features, there are limitations.
+	PusleIn(), Servo() not implemented yet (should be added)
+	Timer1, mills(), micro(), have bugs that cause them to not work as they do on Arduino (should be fixed )
+	There are likely other missing features or bugs that have not been found yet.
+	The I/O speed for the Galileo board is about 100-1000x slower than Arduino pins
+	This can cause problems with talking to sensors and other objects.
+	This makes it practically impossible to use the Galileo for something like a Quadcopter.
+	Also some sensors will not work at all (like the DHT11)
+	The Power consumption is much higher than Arduino boards.
+	The exact power numbers will vary, but it is best if your project includes plugging the Galileo into a wall socket.
+	The capability exists to reduce the power, but I am not sure how quickly this issue will be addressed.
+	Any Arduino libraries that use AVR will not work.
+	AVR is specific to Arduino architecture, and no replacement has been developed yet.
